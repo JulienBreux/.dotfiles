@@ -31,8 +31,11 @@ cask "spotify"
 mas "Magnet", id: 441258766
 mas "Things", id: 904280696
 
-# CLI software installed
+# Languages
+brew "node"
 brew "go"
+
+# CLI software installed
 brew "go-task"
 brew "git"
 brew "hub"
