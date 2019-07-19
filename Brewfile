@@ -33,7 +33,6 @@ mas "Things", id: 904280696
 # CLI software installed
 brew "go"
 brew "go-task"
-brew "gpg"
 brew "git"
 brew "hub"
 brew "tmux"
