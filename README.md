@@ -24,3 +24,9 @@ task setup
 ### Theme for iTerm
 
 - See https://gist.github.com/kevin-smets/8568070
+
+## GPG Signature
+
+You can download Julien Breux's public key to verify the signature.
+
+    gpg --keyserver hkp://pgp.mit.edu --recv-keys 0F6864A0
