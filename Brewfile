@@ -23,6 +23,7 @@ cask "gpg-suite"
 cask "docker"
 cask "virtualbox"
 cask "minikube"
+cask "vagrant"
 
 cask "spotify"
 
