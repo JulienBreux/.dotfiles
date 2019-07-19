@@ -39,6 +39,9 @@ alias d="docker"
 ## Task
 alias t="task"
 
+## Brew
+alias bb="brew bundle"
+
 ####################
 # Personal functions
 ####################
