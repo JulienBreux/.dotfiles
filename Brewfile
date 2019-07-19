@@ -3,6 +3,8 @@ cask_args appdir: "/Applications"
 # Repositories used
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
+tap "homebrew/cask-fonts"
+tap "go-task/tap"
 
 # GUI software installed
 cask "dashlane"
@@ -16,6 +18,7 @@ cask "whatsapp"
 
 cask "visual-studio-code"
 cask "iterm2"
+cask "font-hack-nerd-font"
 cask "docker"
 cask "virtualbox"
 cask "minikube"
@@ -27,12 +30,15 @@ mas "Magnet", id: 441258766
 mas "Things", id: 904280696
 
 # CLI software installed
-brew "zsh"
 brew "go"
+brew "go-task"
+brew "gpg"
 brew "git"
 brew "hub"
 brew "tmux"
 brew "mas"
+brew "tree"
+brew "zsh-syntax-highlighting"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"

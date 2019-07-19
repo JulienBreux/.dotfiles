@@ -1,0 +1,45 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+  TERM_SHELL: zsh
+  TERM_THEME: agnoster
+
+tasks:
+  # Global setup
+  setup:
+    deps: ["setup:shell"]
+
+  # Setup Oh My ZSH
+  "setup:omz":
+    cmds:
+      - echo "Setup OMZ - Core"
+      - if [ ! -d "oh-my-zsh" ]; then git clone https://github.com/robbyrussell/oh-my-zsh.git; fi
+      - if [ ! -d "oh-my-zsh" ]; then ln -s "$(pwd)/.zshrc" "$HOME/.zshrc"; fi
+      - task: setup:omz:plugins
+      - task: setup:omz:theme
+    silent: true
+
+  # Setup OMZ Plugins
+  "setup:omz:plugins":
+    cmds:
+      - echo "Setup OMZ - Plugins"
+      - if [ ! -d "oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./oh-my-zsh/custom/plugins/zsh-syntax-highlighting; fi
+    silent: true
+
+  # Setup OMZ Theme
+  "setup:omz:theme":
+    cmds:
+      - echo "Setup OMZ - Theme"
+      - if [ ! -d "oh-my-zsh/custom/themes/powerlevel10k" ]; then git clone https://github.com/romkatv/powerlevel10k.git ./oh-my-zsh/custom/themes/powerlevel10k; fi
+    silent: true
+
+  # Setup shell
+  "setup:shell":
+    deps: ["setup:omz"]
+    cmds:
+      - echo "Setup shell '{{.TERM_SHELL}}' stating..."
+      - chsh -s $(which {{.TERM_SHELL}})
+      - echo "Setup shell '{{.TERM_SHELL}}' done!"
+    silent: true
