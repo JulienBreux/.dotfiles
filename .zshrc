@@ -46,6 +46,7 @@ alias d="docker"
 
 ## Terraform
 alias tf="terraform"
+alias tg="terragrunt"
 
 ## Task
 alias t="task"
