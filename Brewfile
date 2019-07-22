@@ -26,6 +26,7 @@ cask "minikube"
 cask "vagrant"
 
 cask "spotify"
+cask "timeular"
 
 # GUI Software from official store installed
 mas "Magnet", id: 441258766
