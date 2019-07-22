@@ -43,6 +43,9 @@ alias h="helm"
 ## Docker
 alias d="docker"
 
+## Terraform
+alias tf="terraform"
+
 ## Task
 alias t="task"
 
