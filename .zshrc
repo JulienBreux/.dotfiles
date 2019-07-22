@@ -33,6 +33,9 @@ source $ZSH/oh-my-zsh.sh
 # Personal aliases
 ##################
 
+## System
+alias lls="ls -alh"
+
 ## Kubernetes
 alias k="kubectl"
 alias h="helm"
