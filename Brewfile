@@ -45,6 +45,7 @@ brew "tmux"
 brew "mas"
 brew "tree"
 brew "zsh-syntax-highlighting"
+brew "awscli"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
