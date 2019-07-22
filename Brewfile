@@ -47,6 +47,8 @@ brew "tree"
 brew "zsh-syntax-highlighting"
 brew "awscli"
 brew "jq"
+brew "terraform"
+brew "packer"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
