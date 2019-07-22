@@ -46,6 +46,7 @@ brew "mas"
 brew "tree"
 brew "zsh-syntax-highlighting"
 brew "awscli"
+brew "jq"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
