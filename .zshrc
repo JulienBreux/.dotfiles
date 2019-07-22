@@ -19,7 +19,7 @@ export UPDATE_ZSH_DAYS=10
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load?
-plugins=(zsh-syntax-highlighting git docker kubectl)
+plugins=(zsh-syntax-highlighting git docker kubectl vagrant)
 
 DEFAULT_USER="jbx"
 
