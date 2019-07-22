@@ -44,6 +44,9 @@ alias h="helm"
 ## Docker
 alias d="docker"
 
+## Editor
+alias c="code"
+
 ## Terraform
 alias tf="terraform"
 alias tg="terragrunt"
