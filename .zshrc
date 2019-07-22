@@ -34,6 +34,7 @@ source $ZSH/oh-my-zsh.sh
 ##################
 
 ## System
+alias sz="source ~/.zshrc"
 alias lls="ls -alh"
 
 ## Kubernetes
