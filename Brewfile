@@ -48,6 +48,7 @@ brew "zsh-syntax-highlighting"
 brew "awscli"
 brew "jq"
 brew "terraform"
+brew "terragrunt"
 brew "packer"
 
 brew "kubernetes-cli"
