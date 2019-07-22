@@ -24,6 +24,7 @@ cask "docker"
 cask "virtualbox"
 cask "minikube"
 cask "vagrant"
+cask "gitkraken"
 
 cask "spotify"
 cask "timeular"
