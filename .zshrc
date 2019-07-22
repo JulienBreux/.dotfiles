@@ -22,7 +22,7 @@ export UPDATE_ZSH_DAYS=10
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load?
-plugins=(zsh-syntax-highlighting git docker kubectl vagrant)
+plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws)
 
 DEFAULT_USER="jbx"
 
@@ -45,6 +45,9 @@ alias t="task"
 
 ## Brew
 alias bb="brew bundle"
+
+## AWS
+alias a="aws"
 
 ####################
 # Personal functions
