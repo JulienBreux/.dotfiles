@@ -1,8 +1,11 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LC_ALL=en_US.UTF-8
 
+# Path to .dotfiles
+export DOTFILES=$HOME/.dotfiles
+
 # Path to oh-my-zsh installation.
-export ZSH=$HOME/.dotfiles/oh-my-zsh
+export ZSH=$DOTFILES/oh-my-zsh
 
 # Set name of the theme to load
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -23,6 +26,7 @@ plugins=(zsh-syntax-highlighting git docker kubectl vagrant)
 
 DEFAULT_USER="jbx"
 
+source $DOTFILES/secrets.sh
 source $ZSH/oh-my-zsh.sh
 
 ##################

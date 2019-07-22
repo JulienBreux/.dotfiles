@@ -41,5 +41,6 @@ tasks:
     cmds:
       - echo "Setup shell '{{.TERM_SHELL}}' stating..."
       - chsh -s $(which {{.TERM_SHELL}})
+      - if [ ! -f "secrets.sh" ]; then cp secrets-template.sh secrets.sh; fi
       - echo "Setup shell '{{.TERM_SHELL}}' done!"
     silent: true
