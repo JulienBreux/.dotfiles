@@ -50,6 +50,7 @@ brew "jq"
 brew "terraform"
 brew "terragrunt"
 brew "packer"
+brew "hadolint"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
