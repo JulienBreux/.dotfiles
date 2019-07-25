@@ -22,7 +22,7 @@ export UPDATE_ZSH_DAYS=10
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load?
-plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws)
+plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws yarn)
 
 DEFAULT_USER="jbx"
 
