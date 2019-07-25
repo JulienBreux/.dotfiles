@@ -35,6 +35,7 @@ mas "Things", id: 904280696
 
 # Languages
 brew "node"
+brew "yarn"
 brew "go"
 
 # CLI software installed
