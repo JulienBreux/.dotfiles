@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
 tap "go-task/tap"
+tap "datawire/blackbird"
 
 # GUI software installed
 cask "dashlane"
@@ -53,6 +54,7 @@ brew "terraform"
 brew "terragrunt"
 brew "packer"
 brew "hadolint"
+brew "telepresence"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
