@@ -1,5 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LC_ALL=en_US.UTF-8
+export PATH=$PATH:/usr/local/go/bin
 
 # Path to .dotfiles
 export DOTFILES=$HOME/.dotfiles
