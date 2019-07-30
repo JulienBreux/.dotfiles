@@ -58,6 +58,7 @@ brew "hadolint"
 brew "telepresence"
 brew "httpie"
 brew "pipes-sh"
+brew "brightness"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
