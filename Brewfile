@@ -55,6 +55,7 @@ brew "terragrunt"
 brew "packer"
 brew "hadolint"
 brew "telepresence"
+brew "httpie"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
