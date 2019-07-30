@@ -27,6 +27,7 @@ cask "minikube"
 cask "vagrant"
 cask "gitkraken"
 cask "osxfuse"
+cask "ngrok"
 
 cask "spotify"
 cask "timeular"
