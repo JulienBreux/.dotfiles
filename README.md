@@ -22,7 +22,7 @@ task setup
 
 ### Theme for iTerm
 
-- See https://gist.github.com/kevin-smets/8568070
+- See [Kevin Smets Gist](https://gist.github.com/kevin-smets/8568070)
 
 ### Alias
 
