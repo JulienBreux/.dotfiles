@@ -57,4 +57,4 @@ task setup
 
 You can download Julien Breux's public key to verify the signature.
 
-    gpg --keyserver hkp://pgp.mit.edu --recv-keys 0BD023FA
+`gpg --keyserver hkp://pgp.mit.edu --recv-keys 0BD023FA`
