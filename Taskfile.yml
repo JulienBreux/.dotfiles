@@ -7,40 +7,71 @@ vars:
   TERM_THEME: agnoster
 
 tasks:
+  # Default
+  default:
+    cmds:
+      - task --list
+
   # Global setup
   setup:
-    deps: ["setup:shell"]
+    silent: true
+    desc: "Setup installation"
+    cmds:
+      - task: "setup:shell"
+      - task: "setup:os"
 
   # Setup Oh My ZSH
   "setup:omz":
+    silent: true
+    desc: "Setup Oh My ZSH"
     cmds:
       - echo "Setup OMZ - Core"
       - if [ ! -d "oh-my-zsh" ]; then git clone https://github.com/robbyrussell/oh-my-zsh.git; fi
       - if [ ! -d "oh-my-zsh" ]; then ln -s "$(pwd)/.zshrc" "$HOME/.zshrc"; fi
       - task: setup:omz:plugins
       - task: setup:omz:theme
-    silent: true
 
   # Setup OMZ Plugins
   "setup:omz:plugins":
+    silent: true
+    desc: "Setup Oh My ZSH Plugins"
     cmds:
       - echo "Setup OMZ - Plugins"
       - if [ ! -d "oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ./oh-my-zsh/custom/plugins/zsh-syntax-highlighting; fi
-    silent: true
 
   # Setup OMZ Theme
   "setup:omz:theme":
+    silent: true
+    desc: "Setup Oh My ZSH Themes"
     cmds:
       - echo "Setup OMZ - Theme"
       - if [ ! -d "oh-my-zsh/custom/themes/powerlevel10k" ]; then git clone https://github.com/romkatv/powerlevel10k.git ./oh-my-zsh/custom/themes/powerlevel10k; fi
-    silent: true
 
   # Setup shell
   "setup:shell":
+    silent: true
+    desc: "Setup shell"
     deps: ["setup:omz"]
     cmds:
       - echo "Setup shell '{{.TERM_SHELL}}' stating..."
       - chsh -s $(which {{.TERM_SHELL}})
       - if [ ! -f "secrets.sh" ]; then cp secrets-template.sh secrets.sh; fi
       - echo "Setup shell '{{.TERM_SHELL}}' done!"
+
+  # Setup OS
+  "setup:os":
     silent: true
+    desc: "Setup OS"
+    cmds:
+      - echo "Setup OS starting..."
+      - defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+      - echo "Dock auto hide modifier set to 0"
+      - echo "Setup OS done!"
+
+  # Github Login Docker Registry
+  "github:docker:login":
+    silent: true
+    desc: "Github - Docker login"
+    cmds:
+      - echo "Connecting to Github Docker Registry..."
+      - echo "$GITHUB_TOKEN" | docker login docker.pkg.github.com -u "$GITHUB_USER" --password-stdin

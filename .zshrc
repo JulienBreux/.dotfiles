@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 ## System
 alias sz="source ~/.zshrc"
 alias lls="ls -alh"
+alias cdf="cd $DOTFILES"
 
 ## Kubernetes
 alias k="kubectl"
@@ -65,4 +66,7 @@ alias a="aws"
 # Personal functions
 ####################
 
-
+## ZSH Tasks
+zt () {
+    task -d $DOTFILES $1
+}
