@@ -28,6 +28,7 @@ cask "vagrant"
 cask "gitkraken"
 cask "osxfuse"
 cask "ngrok"
+cask "vanilla"
 
 cask "spotify"
 cask "timeular"
