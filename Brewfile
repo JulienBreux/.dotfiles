@@ -6,6 +6,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
 tap "go-task/tap"
 tap "datawire/blackbird"
+tap "yudai/gotty"
 
 # GUI software installed
 cask "dashlane"
@@ -61,6 +62,8 @@ brew "telepresence"
 brew "httpie"
 brew "pipes-sh"
 brew "brightness"
+brew "fzf"
+brew "gotty"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
