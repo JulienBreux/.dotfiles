@@ -33,8 +33,9 @@ cask "spotify"
 cask "timeular"
 
 # GUI Software from official store installed
-mas "Magnet", id: 441258766
-mas "Things", id: 904280696
+mas "Things",      id: 904280696  # 3.9.1
+mas "iStat Menus", id: 1319778037 # 6.31
+mas "Magnet",      id: 441258766  # 6.1
 
 # Languages
 brew "node"
