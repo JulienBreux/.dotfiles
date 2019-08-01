@@ -30,6 +30,7 @@ cask "gitkraken"
 cask "osxfuse"
 cask "ngrok"
 cask "vanilla"
+cask "rocket"
 
 cask "spotify"
 cask "timeular"
