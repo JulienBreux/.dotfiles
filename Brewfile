@@ -65,6 +65,8 @@ brew "pipes-sh"
 brew "brightness"
 brew "fzf"
 brew "gotty"
+brew "goreleaser"
+brew "circleci"
 
 brew "kubernetes-cli"
 brew "kubernetes-helm"
