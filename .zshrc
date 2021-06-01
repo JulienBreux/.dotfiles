@@ -5,6 +5,11 @@ export PATH=$PATH:$HOME/go/bin
 export PATH="$PATH:/usr/local/opt/gnu-sed/libexec/gnubin"
 export PATH="$PATH:$HOME/.cargo/bin/"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+export CLOUDSDK_PYTHON=/usr/bin/python3
+export GO15VENDOREXPERIMENT=1
 
 # Path to .dotfiles
 export DOTFILES=$HOME/.dotfiles
@@ -30,10 +35,11 @@ DISABLE_UPDATE_PROMPT="true"
 export UPDATE_ZSH_DAYS=10
 
 # Stamp shown in the history command output.
+
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load?
-plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws yarn dotenv terraform kubectl fzf)
+plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws yarn terraform kubectl fzf)
 
 DEFAULT_USER="jbx"
 
@@ -104,33 +110,24 @@ alias igl='kubectl -n istio-system logs $(kubectl -n istio-system get pods -list
 # Shows issues with configurations or connecting to the Envoy proxies
 alias ipl='kubectl -n istio-system logs $(kubectl -n istio-system get pods -listio=pilot -o=jsonpath="{.items[0].metadata.name}") discovery --tail=300'
 
+## CircleCI
 alias cciv='circleci config validate'
 
 ####################
 # Personal functions
 ####################
 
-## ZSH Tasks
-zt () {
-    task -d $DOTFILES $1
-}
-
-## Ansible vault
-#### Edit
-ave() {
-    ansible-vault edit --vault-password-file ~/.ansible_vault $1
-}
-
-#### Create
-avc() {
-    ansible-vault create --vault-password-file ~/.ansible_vault $1
-}
-
 autoload -U +X bashcompinit && bashcompinit
+
+####################
+# Terraform
+###################
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-alias vpf0="echo 'https://localhost:8200' && kubectl port-forward pods/default-0 -n vault 8200:8200"
-alias vpf1="echo 'https://localhost:8200' && kubectl port-forward pods/default-1 -n vault 8200:8200"
+####################
+# FluxCD
+###################
+. <(flux completion zsh)
 
 ####################
 # Personal envs vars
@@ -149,21 +146,45 @@ export KUBE_EDITOR=nano
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+####################
+# Vault
+####################
+alias vpf0="echo 'https://localhost:8200' && kubectl port-forward pods/default-0 -n vault 8200:8200"
+alias vpf1="echo 'https://localhost:8200' && kubectl port-forward pods/default-1 -n vault 8200:8200"
 complete -o nospace -C /usr/local/bin/vault vault
 
+####################
+# NVM
+####################
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-DEVENV_PATH=/Users/jbx/ornikar/devenv
-source $DEVENV_PATH/source
+####################
+# MySQL
+####################
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+####################
+# MinIO
+####################
 complete -o nospace -C /usr/local/bin/mc mc
+
+####################
+# Golang CI Lint
+####################
 source <(golangci-lint completion zsh)
 
+####################
+# Git
+####################
 alias gcmsg=gcsm
 alias ggg='gco master && gfa && ggu'
+
+####################
+# Rust
+####################
+source $HOME/.cargo/env
