@@ -1,6 +1,5 @@
 tap "azure/draft"
 tap "cjbassi/gotop"
-tap "datawire/blackbird"
 tap "derailed/k9s"
 tap "derailed/popeye"
 tap "exolnet/deprecated"
@@ -129,7 +128,6 @@ brew "yq"
 brew "zsh-syntax-highlighting"
 brew "azure/draft/draft"
 brew "cjbassi/gotop/gotop"
-brew "datawire/blackbird/telepresence-legacy"
 brew "derailed/k9s/k9s"
 brew "derailed/popeye/popeye"
 brew "fluxcd/tap/flux"
@@ -150,29 +148,18 @@ brew "weaveworks/tap/eksctl"
 brew "yudai/gotty/gotty"
 cask "adoptopenjdk"
 cask "angry-ip-scanner"
-cask "dashlane", args: { appdir: "/Applications" }
-cask "dbeaver-community"
 cask "discord"
-cask "docker", args: { appdir: "/Applications" }
-cask "firefox", args: { appdir: "/Applications" }
-cask "fluxui"
 cask "font-hack-nerd-font", args: { appdir: "/Applications" }
 cask "github"
-cask "gitkraken", args: { appdir: "/Applications" }
-cask "google-chrome", args: { appdir: "/Applications" }
-cask "google-chrome-canary", args: { appdir: "/Applications" }
 cask "google-cloud-sdk"
 cask "gpg-suite", args: { appdir: "/Applications" }
 cask "graphiql"
 cask "insomnia"
 cask "iterm2", args: { appdir: "/Applications" }
-cask "java"
-cask "minikube", args: { appdir: "/Applications" }
 cask "multipass"
 cask "ngrok", args: { appdir: "/Applications" }
 cask "osxfuse", args: { appdir: "/Applications" }
 cask "rar"
-cask "rocket", args: { appdir: "/Applications" }
 cask "sequel-pro"
 cask "skype"
 cask "slack", args: { appdir: "/Applications" }
@@ -185,8 +172,6 @@ cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "vlc"
 cask "vnc-viewer"
 cask "whatsapp", args: { appdir: "/Applications" }
-cask "wine-stable"
-cask "xquartz"
 cask "zoom"
 mas "Be Focused", id: 973134470
 mas "GarageBand", id: 682658836
