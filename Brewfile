@@ -159,6 +159,7 @@ cask "insomnia"
 cask "iterm2", args: { appdir: "/Applications" }
 cask "multipass"
 cask "ngrok", args: { appdir: "/Applications" }
+cask "notion", args: { appdir: "/Applications" }
 cask "osxfuse", args: { appdir: "/Applications" }
 cask "rar"
 cask "sequel-pro"
@@ -175,15 +176,23 @@ cask "vnc-viewer"
 cask "whatsapp", args: { appdir: "/Applications" }
 cask "zoom"
 mas "Be Focused", id: 973134470
+mas "CleanMyMac X", id: 1339170533
+mas "Copy 'Em", id: 876540291
+mas "Fantastical", id: 435003921
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "iStat Menus", id: 1319778037
+mas "iStat Menus", id: 1319778037
+mas "iZip Unarchiver", id: 717545828
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Microsoft To Do", id: 1274495053
 mas "Numbers", id: 409203825
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Reader Pro Lite", id: 919472673
 mas "Things", id: 904280696
+mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835
