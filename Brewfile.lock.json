@@ -41,16 +41,16 @@
         "revision": "916be5238f2fade31240a763a4f8da4b65a97ae5"
       },
       "homebrew/cask": {
-        "revision": "fa543ea29fbbe2b7d2d220d5d75213e8a5b4c7d4"
+        "revision": "9f8221cb583b513caa5967c1c7d92aff56b7b8a5"
       },
       "homebrew/cask-fonts": {
         "revision": "d29ef2e6ac83f75847a9a863f6042756795d8865"
       },
       "homebrew/cask-versions": {
-        "revision": "bd556a0f122831d2aa48588b5036ff958dfecac5"
+        "revision": "a268c60b3f3962399e54f61c69410cdff6f38a1d"
       },
       "homebrew/core": {
-        "revision": "e4c818406256621d18460c759fbd1dbc161198e3"
+        "revision": "0e173af74bf0a699a6c85c8d0482895bd8571269"
       },
       "homebrew/services": {
         "revision": "32a7d3c86cdb3f75edc524b2e38b89092d8bc4bd"
@@ -529,6 +529,40 @@
               "cellar": ":any",
               "url": "https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:1205c19a1d51940726534923db0e1c291b001a3ea541d0694afccad7968343a3",
               "sha256": "1205c19a1d51940726534923db0e1c291b001a3ea541d0694afccad7968343a3"
+            }
+          }
+        }
+      },
+      "certstrap": {
+        "version": "1.2.0",
+        "bottle": {
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/certstrap/blobs/sha256:95290ccc53030ee471239996d914839d094f19078edcf7dbeef742730d46b64c",
+              "sha256": "95290ccc53030ee471239996d914839d094f19078edcf7dbeef742730d46b64c"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/certstrap/blobs/sha256:44b1d5f60f4dccbe495c53006a828784dcacca1f63dd008ec93d8a502ed8fb46",
+              "sha256": "44b1d5f60f4dccbe495c53006a828784dcacca1f63dd008ec93d8a502ed8fb46"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/certstrap/blobs/sha256:52e68d4bcd2256bb1026aafefc9aef39c0e7945e1f26c06b3e09f3b7e7d9ab14",
+              "sha256": "52e68d4bcd2256bb1026aafefc9aef39c0e7945e1f26c06b3e09f3b7e7d9ab14"
+            },
+            "mojave": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/certstrap/blobs/sha256:8f7fb0f6d8b559ee4d30972a68d5d76117a86c07233abc49237c516f45f07277",
+              "sha256": "8f7fb0f6d8b559ee4d30972a68d5d76117a86c07233abc49237c516f45f07277"
+            },
+            "high_sierra": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/certstrap/blobs/sha256:12fdf1f518c3f2944d30f4289813a82aa56580b844fc2cc1ad3383d8675c9882",
+              "sha256": "12fdf1f518c3f2944d30f4289813a82aa56580b844fc2cc1ad3383d8675c9882"
             }
           }
         }
@@ -3002,7 +3036,7 @@
         }
       },
       "github": {
-        "version": "2.8.2-4423bb9d",
+        "version": "2.8.3-dee35666",
         "options": {
           "full_name": "github"
         }
@@ -3032,6 +3066,15 @@
         "version": "2021.3.0",
         "options": {
           "full_name": "insomnia"
+        }
+      },
+      "iterm2": {
+        "version": "3.4.8",
+        "options": {
+          "args": {
+            "appdir": "/Applications"
+          },
+          "full_name": "iterm2"
         }
       },
       "multipass": {
@@ -3064,6 +3107,12 @@
           "full_name": "rar"
         }
       },
+      "sequel-pro": {
+        "version": "1.1.2",
+        "options": {
+          "full_name": "sequel-pro"
+        }
+      },
       "skype": {
         "version": "8.72.0.94",
         "options": {
@@ -3094,39 +3143,6 @@
           "full_name": "timeular"
         }
       },
-      "vanilla": {
-        "version": "2.0.2,48",
-        "options": {
-          "full_name": "vanilla"
-        }
-      },
-      "vlc": {
-        "version": "3.0.14",
-        "options": {
-          "full_name": "vlc"
-        }
-      },
-      "zoom": {
-        "version": "5.6.6.950",
-        "options": {
-          "full_name": "zoom"
-        }
-      },
-      "iterm2": {
-        "version": "3.4.8",
-        "options": {
-          "args": {
-            "appdir": "/Applications"
-          },
-          "full_name": "iterm2"
-        }
-      },
-      "sequel-pro": {
-        "version": "1.1.2",
-        "options": {
-          "full_name": "sequel-pro"
-        }
-      },
       "vagrant": {
         "version": "2.2.16",
         "options": {
@@ -3134,6 +3150,12 @@
             "appdir": "/Applications"
           },
           "full_name": "vagrant"
+        }
+      },
+      "vanilla": {
+        "version": "2.0.2,48",
+        "options": {
+          "full_name": "vanilla"
         }
       },
       "virtualbox": {
@@ -3151,6 +3173,12 @@
           "full_name": "visual-studio-code"
         }
       },
+      "vlc": {
+        "version": "3.0.14",
+        "options": {
+          "full_name": "vlc"
+        }
+      },
       "vnc-viewer": {
         "version": "6.21.118",
         "options": {
@@ -3164,6 +3192,12 @@
             "appdir": "/Applications"
           },
           "full_name": "whatsapp"
+        }
+      },
+      "zoom": {
+        "version": "5.6.6.950",
+        "options": {
+          "full_name": "zoom"
         }
       }
     },
@@ -3227,7 +3261,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.1.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e4c818406256621d18460c759fbd1dbc161198e3",
+        "Homebrew/homebrew-core": "0e173af74bf0a699a6c85c8d0482895bd8571269",
         "CLT": "12.5.0.0.1.1617976050",
         "Xcode": "12.5",
         "macOS": "11.4"
