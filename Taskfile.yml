@@ -46,6 +46,7 @@ tasks:
     cmds:
       - echo "Setup OMZ - Theme"
       - if [ ! -d "oh-my-zsh/custom/themes/powerlevel10k" ]; then git clone https://github.com/romkatv/powerlevel10k.git ./oh-my-zsh/custom/themes/powerlevel10k; fi
+      - if [ ! -d ".p10k.zsh" ]; then ln -s "$(pwd)/.p10k.zsh" "$HOME/.p10k.zsh"; fi
 
   # Setup shell
   "setup:shell":
