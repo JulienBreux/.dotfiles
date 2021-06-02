@@ -39,7 +39,18 @@ export UPDATE_ZSH_DAYS=10
 HIST_STAMPS="dd/mm/yyyy"
 
 # Which plugins would you like to load?
-plugins=(zsh-syntax-highlighting git docker kubectl vagrant aws yarn terraform kubectl fzf)
+plugins=(
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+git
+docker
+kubectl
+vagrant
+aws
+yarn
+terraform
+fzf)
 
 DEFAULT_USER="jbx"
 
