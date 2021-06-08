@@ -199,3 +199,8 @@ alias ggg='gco master && gfa && ggu'
 # Rust
 ####################
 source $HOME/.cargo/env
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.16/gems/vagrant-2.2.16/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
